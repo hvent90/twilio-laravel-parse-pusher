@@ -27,7 +27,7 @@ Route::get('/admin', function() {
 Route::post('sms/receive', function() {
 	Log::info('Webhook activation from Twilio');
 
-	$parseMessage = Parse\ParseObject('message');
+	$parseMessage = new Parse\ParseObject('message');
 
     $incoming = SMS::receive();
     //Get the sender's number.
