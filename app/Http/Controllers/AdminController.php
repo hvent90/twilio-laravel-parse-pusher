@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use \App;
 use App\Message;
 use App\Sender;
 
@@ -11,6 +12,7 @@ class AdminController extends Controller {
 	{
 		$this->message = $message;
 		$this->sender = $sender;
+		$this->keys = app()['config']->get('services.pusher');
 	}
 
 	public function chat($parseUserObjectId = null)
@@ -29,7 +31,8 @@ class AdminController extends Controller {
 		}
 
 
-		return view('admin.chat', compact('senders', 'sender'));
+		return view('admin.chat', compact('senders', 'sender'))
+			->with('pusherPublicKey', $this->keys['public']);
 	}
 
 }

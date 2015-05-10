@@ -42,7 +42,7 @@
 			}
 		});
 
-		var pusher = new Pusher('8b70545cb1629c2331be');
+		var pusher = new Pusher('{{ $pusherPublicKey }}');
 
 		var channel = pusher.subscribe('magic-channel');
 
