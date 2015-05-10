@@ -46,9 +46,25 @@ Route::get('test', function() {
 	// var_dump(getenv('PUSHER_SECRET'));
 	// var_dump(getenv('PUSHER_APP_ID'));
 
+	$sender = new App\Sender;
+	$sender = $sender->getSenderByPhoneNumber('+14848867635');
+
+	$message = new App\Message;
+	$message->storeMessage(
+		'+14848867635',
+		'test message',
+		'3928',
+		$sender['parse_object_id']
+	);
+
 	App::make('Pusher')->trigger('magic-channel', 'receive-sms', [
 		'phone_number' => 'fasdfa',
 		'message' 	   => 'asdfasdfasdf'
+	]);
+
+	App::make('Pusher')->trigger('magic-channel', 'side-nav', [
+		'phone_number' => '+14848867635',
+		'parse_object_id' => '27iqWzMjfD'
 	]);
 });
 

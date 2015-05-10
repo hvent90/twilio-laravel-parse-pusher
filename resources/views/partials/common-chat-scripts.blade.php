@@ -53,6 +53,7 @@
 			if (senderListItem.text()) {
 				console.log('found existing sender in side menu');
 				senderListItem.prependTo($('#sender-list'));
+				senderListItem.addClass('unread');
 			} else {
 				console.log('did not find an existing sender in side menu');
 				$('#sender-list').prepend(
