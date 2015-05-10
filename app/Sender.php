@@ -68,9 +68,12 @@ class Sender  {
 			for ($i = 0; $i < count($results); $i++) {
 				$object = $results[$i];
 
+				$sendersMessages = $this->message->getMessagesByUser($object->getObjectId());
+
 				$sender = [
 					'parse_object_id' => $object->getObjectId(),
-					'phone_number' => $object->get('phone_number')
+					'phone_number' => $object->get('phone_number'),
+					'messages' => $sendersMessages
 				];
 			}
 

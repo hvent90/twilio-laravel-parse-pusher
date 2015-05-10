@@ -59,7 +59,7 @@
 
 		var channel = pusher.subscribe('magic-channel');
 
-		channel.bind('receive-sms', function(data) {
+		channel.bind("{{ $sender['parse_object_id'] }}", function(data) {
 			console.log('receiving pusher');
 			$('#chat-log').append(
 				'<div class="collection-item message-container message-them">' +

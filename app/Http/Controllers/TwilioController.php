@@ -51,7 +51,7 @@ class TwilioController extends Controller {
 		//     return new \Pusher($keys['public'], $keys['secret'], $keys['app_id']);
 		// });
 
-    	App::make('Pusher')->trigger('magic-channel', 'receive-sms', [
+    	App::make('Pusher')->trigger('magic-channel', $sender['parse_object_id'], [
 			'phone_number' => $phoneNumber,
     		'message' 	   => $message
 		]);
