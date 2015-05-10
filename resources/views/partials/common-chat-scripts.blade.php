@@ -47,6 +47,7 @@
 		var channel = pusher.subscribe('magic-channel');
 
 		channel.bind("side-nav", function(data) {
+			console.log('side-nav pusher activation');
 			var senderListItem = $('#' + data.parse_object_id);
 
 			if (senderListItem.text()) {
