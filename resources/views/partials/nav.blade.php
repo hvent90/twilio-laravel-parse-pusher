@@ -6,7 +6,7 @@
     @if ($senders)
   		@foreach ($senders as $sender)
         @if ($sender['unread'] == true)
-          <a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item waves-effect waves-light waves-green active unread">{{ $sender['phone_number'] }}</a>
+          <a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item waves-effect waves-light waves-green unread">{{ $sender['phone_number'] }}</a>
         @else
           <a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item waves-effect waves-light waves-green">{{ $sender['phone_number'] }}</a>
         @endif

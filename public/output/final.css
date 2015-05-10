@@ -7799,10 +7799,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin: 0 auto; }
   #sidenav-jaun h4 {
     color: #444; }
-  #sidenav-jaun .collection .collection-item {
-    text-align: center; }
-    #sidenav-jaun .collection .collection-item.unread {
-      background-color: #4F6C69; }
+  #sidenav-jaun .collection {
+    border: inherit; }
+    #sidenav-jaun .collection .collection-item {
+      text-align: center; }
+      #sidenav-jaun .collection .collection-item.unread {
+        background-color: #4F6C69; }
 
 .chat-container .message-history-container {
   height: calc(100vh - 48px);
