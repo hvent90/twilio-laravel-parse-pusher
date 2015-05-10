@@ -57,7 +57,7 @@ Route::get('test', function() {
 		$sender['parse_object_id']
 	);
 
-	App::make('Pusher')->trigger('magic-channel', 'receive-sms', [
+	App::make('Pusher')->trigger('magic-channel', $sender['parse_object_id'], [
 		'phone_number' => 'fasdfa',
 		'message' 	   => 'asdfasdfasdf'
 	]);
