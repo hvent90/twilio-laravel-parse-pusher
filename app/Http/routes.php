@@ -31,15 +31,15 @@ Route::post('sms/receive', function() {
 
     $incoming = SMS::receive();
     //Get the sender's number.
-    $message->set('from_number', $incoming->from());
+    $parseMessage->set('from_number', $incoming->from());
     //Get the message sent.
-    $message->set('message', $incoming->message());
+    $parseMessage->set('message', $incoming->message());
     //Get the to unique Twilio ID of the message
-    $message->set('twilio_id', $incoming->id());
+    $parseMessage->set('twilio_id', $incoming->id());
 
     try {
-    	$message->save();
-		echo 'New object created with objectId: ' . $message->getObjectId();
+    	$parseMessage->save();
+		echo 'New object created with objectId: ' . $parseMessage->getObjectId();
     } catch (ParseException $ex) {
 		echo 'Failed to create new object, with error message: ' + $ex->getMessage();
     }
