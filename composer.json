@@ -10,7 +10,7 @@
 		"simplesoftwareio/simple-sms": "dev-master",
 		"graham-campbell/parse": "~2.1",
 		"barryvdh/laravel-cors": "0.5.*@dev",
-		"hvent90/api-inspector": "~1.0"
+		"vinkla/pusher": "1.1.*@dev"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

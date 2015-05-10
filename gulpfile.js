@@ -38,6 +38,7 @@ elixir(function(mix) {
     // mix.scriptsIn('resources/assets/js', 'public/output/final.js');
     mix.scripts([
         "vendor/jquery-2.1.3.min.js",
+        "vendor/pusher.min.js",
         "material/bin/materialize.min.js"
     ], "public/output/final.js", 'resources/assets/js/');
 });

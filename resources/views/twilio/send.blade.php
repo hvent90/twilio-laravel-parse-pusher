@@ -1,1 +1,1 @@
-{{ $message }}
+{{ $sendingMessage }}

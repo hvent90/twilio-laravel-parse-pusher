@@ -1,11 +1,13 @@
 <?php namespace App\Http\Controllers;
 
+use Input;
 use App\Message;
 use App\Sender;
 use Illuminate\Http\Request;
 use Log, SMS;
 use Parse\ParseException;
 use Parse\ParseObject;
+use Pusher;
 
 class TwilioController extends Controller {
 
@@ -42,20 +44,30 @@ class TwilioController extends Controller {
     		$twillioId,
     		$sender['parse_object_id']
     	);
+
+    	Pusher::trigger('magic', 'receive-sms', [
+    		'phone_number' => $phoneNumber,
+    		'message' 	   => $message
+    	]);
 	}
 
 	public function enter(Request $request)
 	{
+		// $request->headers->set('content-type','application/json');
+
 	    // Get the recipient's number.
 	    $phoneNumber = 'admin';
+
 	    // Get the sender's message
 	    $message = $request->get('message');
+
 	    // Get the unique Parse Object ID of the recipient
 	    $parseObjectId = $request->get('parseSenderObjectId');
+
 	    // Get the unique Twilio ID for the message
 	    $twillioId = '';
 
-	    $this->message->sendMessage($message, $phoneNumber);
+	    $this->message->sendMessage($message, $request->get('phoneNumber'));
 
     	$this->message->storeMessage(
     		$phoneNumber,

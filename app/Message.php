@@ -46,9 +46,9 @@ class Message  {
 
 	public function sendMessage($message, $phoneNumber)
 	{
-		$data = ['message' => $message];
+		$data = ['sendingMessage' => $message];
 
-		SMS::send('twilio.send', $data, function($sms, $phoneNumber) {
+		SMS::send('twilio.send', $data, function($sms) use ($phoneNumber) {
 		    $sms->to($phoneNumber);
 		});
 	}

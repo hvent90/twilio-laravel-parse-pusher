@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "23901d9758649f11510a10c5d4f9729a",
+    "hash": "95d97830922229324e85c2e51236a40a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -315,6 +315,63 @@
             "time": "2014-12-20 21:24:13"
         },
         {
+            "name": "graham-campbell/manager",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
+                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
+                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@mineuk.com"
+                }
+            ],
+            "description": "Manager Provides Some Manager Functionality For Laravel 5",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Manager",
+                "Laravel-Manager",
+                "connector",
+                "framework",
+                "interface",
+                "laravel",
+                "manager"
+            ],
+            "time": "2015-05-07 12:37:59"
+        },
+        {
             "name": "graham-campbell/parse",
             "version": "v2.1.0",
             "source": {
@@ -493,53 +550,6 @@
                 "stream"
             ],
             "time": "2014-08-17 21:15:53"
-        },
-        {
-            "name": "hvent90/api-inspector",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hvent90/api-inspector.git",
-                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hvent90/api-inspector/zipball/a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
-                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
-                "shasum": ""
-            },
-            "require": {
-                "pusher/pusher-php-server": "~2.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Hvent90\\ApiInspector\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Henry Ventura",
-                    "email": "hvent90@gmail.com"
-                }
-            ],
-            "description": "Streams API requests",
-            "keywords": [
-                "5",
-                "api",
-                "debug",
-                "http",
-                "inspect",
-                "inspection",
-                "inspector",
-                "laravel",
-                "request"
-            ],
-            "time": "2015-04-29 17:47:43"
         },
         {
             "name": "illuminate/html",
@@ -2272,6 +2282,66 @@
             "time": "2014-12-04 19:17:59"
         },
         {
+            "name": "vinkla/pusher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vinkla/pusher.git",
+                "reference": "5b24b5f67d20d9406e946d914f02178e487295d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vinkla/pusher/zipball/5b24b5f67d20d9406e946d914f02178e487295d7",
+                "reference": "5b24b5f67d20d9406e946d914f02178e487295d7",
+                "shasum": ""
+            },
+            "require": {
+                "graham-campbell/manager": "~2.1",
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9",
+                "pusher/pusher-php-server": "~2.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vinkla\\Pusher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com"
+                }
+            ],
+            "description": "A Pusher bridge for Laravel",
+            "keywords": [
+                "api",
+                "events",
+                "http",
+                "laravel",
+                "php-pusher-server",
+                "publish",
+                "pusher",
+                "realtime",
+                "rest",
+                "trigger"
+            ],
+            "time": "2015-05-09 13:07:52"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v1.1.0",
             "source": {
@@ -3398,7 +3468,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "simplesoftwareio/simple-sms": 20,
-        "barryvdh/laravel-cors": 20
+        "barryvdh/laravel-cors": 20,
+        "vinkla/pusher": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

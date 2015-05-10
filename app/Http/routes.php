@@ -36,9 +36,11 @@ Route::group(['prefix' => 'parse'], function() {
 
 Route::get('/twilio', function() {
 	//Service Providers Example
-	$data = [];
-	SMS::send('twilio.send', $data, function($sms) {
-	    $sms->to('+14848831087');
+	$data = ['sendingMessage' => 'test'];
+	$phoneNumber = '+14848867635';
+
+	SMS::send('twilio.send', $data, function($sms) use ($phoneNumber) {
+	    $sms->to($phoneNumber);
 	});
 });
 

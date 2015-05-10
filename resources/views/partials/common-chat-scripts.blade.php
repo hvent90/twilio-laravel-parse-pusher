@@ -17,16 +17,48 @@
 
 				$.ajax({
 					type: "POST",
+					contentType: "application/json",
+    				// dataType: "json",
 					url: '/sms/enter',
-					data: formData,
+					data: JSON.stringify(formData),
 					success: function (data) {
-						console.log(data);
 						$('#input').val('');
+						$('#chat-log').append(
+							'<div class="collection-item message-container message-me">' +
+								'<span class="message-author">Me:</span>' +
+								formData.message +
+							'</div>'
+						);
 					}
 				});
 
 				return false;
 			}
+		});
+
+		// window.App = {};
+
+		// App.Notifier = function() {
+		// 	this.notify = function(messagePackage) {
+		// 		$('#chat-log').append(
+		// 			'<div class="collection-item message-container message-them">' +
+		// 				'<span class="message-author">+'messagepackage.phone_number'+:</span>' +
+		// 				messagePackage.message +
+		// 			'</div>'
+		// 		);
+		// 	};
+		// };
+
+		var pusher = new Pusher('8b70545cb1629c2331be');
+
+		var channel = pusher.subscribe('magic');
+
+		channel.bind('receive-sms', function(data) {
+			$('#chat-log').append(
+				'<div class="collection-item message-container message-them">' +
+					'<span class="message-author">' + data.phone_number + ':</span>' +
+					data.message +
+				'</div>');
 		});
 	});
 </script>

@@ -148,7 +148,8 @@ return [
 		'SimpleSoftwareIO\SMS\SMSServiceProvider',
 		'GrahamCampbell\Parse\ParseServiceProvider',
 		'Barryvdh\Cors\CorsServiceProvider',
-		// 'Hvent90\ApiInspector\ApiInspectorServiceProvider'
+		'Vinkla\Pusher\PusherServiceProvider'
+
 	],
 
 	/*
@@ -198,7 +199,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'SMS' 		=> 'SimpleSoftwareIO\SMS\Facades\SMS',
 		'Form'		=> 'Illuminate\Html\FormFacade',
-		'HTML'		=> 'Illuminate\Html\HtmlFacade'
+		'HTML'		=> 'Illuminate\Html\HtmlFacade',
+		'Pusher' => 'Vinkla\Pusher\Facades\Pusher'
 	],
 
 ];
