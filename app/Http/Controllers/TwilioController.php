@@ -51,11 +51,11 @@ class TwilioController extends Controller {
     		'parse_object_id' => $sender['parse_object_id']
 		]);
 
-		App::make('pusher')->trigger('magic-channel', 'side-nav', [
-			'phone_number' => $phoneNumber,
-    		'message' 	   => $message,
-    		'parse_object_id' => $sender['parse_object_id']
-		]);
+		// App::make('pusher')->trigger('magic-channel', 'side-nav', [
+		// 	'phone_number' => $phoneNumber,
+  //   		'message' 	   => $message,
+  //   		'parse_object_id' => $sender['parse_object_id']
+		// ]);
 	}
 
 	public function enter(Request $request)
