@@ -27,6 +27,7 @@ Route::controllers([
 ]);
 
 Route::get('/chat', 'AdminController@chat');
+Route::get('/chat/{parseUserObjectId}', 'AdminController@chat');
 
 Route::group(['prefix' => 'sms'], function() {
 	Route::post('receive', 'TwilioController@receive');

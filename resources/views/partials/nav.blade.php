@@ -4,7 +4,7 @@
 	</div>
 	<div class="collection no-margin">
 		@foreach ($senders as $sender)
-			<a href="#!" class="collection-item">{{ $sender['phone_number'] }}</a>
+			<a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item">{{ $sender['phone_number'] }}</a>
 		@endforeach
 	</div>
 </div>

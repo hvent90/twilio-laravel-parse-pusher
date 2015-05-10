@@ -57,6 +57,29 @@ class Sender  {
 		return false;
 	}
 
+	public function getSenderByObjectId($objectId)
+	{
+		$query = new ParseQuery("Sender");
+		$query->equalTo("objectId", $objectId);
+
+		$results = $query->find();
+
+		if ($results) {
+			for ($i = 0; $i < count($results); $i++) {
+				$object = $results[$i];
+
+				$sender = [
+					'parse_object_id' => $object->getObjectId(),
+					'phone_number' => $object->get('phone_number')
+				];
+			}
+
+			return $sender;
+		}
+
+		return false;
+	}
+
 	public function createNewParseSender($phoneNumber)
 	{
 		$parseMessage = new ParseObject('Sender');
