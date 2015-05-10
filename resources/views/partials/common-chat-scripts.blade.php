@@ -29,6 +29,12 @@
 								formData.message +
 							'</div>'
 						);
+
+						$('#chat-log').animate({
+								scrollTop: $('#chat-log').scrollHeight
+							}, 500);
+						var chatWindow = document.getElementById('chat-log');
+						chatWindow.scrollTop = chatWindow.scrollHeight;
 					}
 				});
 
@@ -61,9 +67,12 @@
 					data.message +
 				'</div>');
 
-			$('#chat-log').animate({
-					scrollTop: $('#chat-log').prop("#scrollHeight")
-				}, 500);
+			// $('#chat-log').animate({
+			// 		scrollTop: $('#chat-log').scrollHeight
+			// 	}, 500);
+			// $('.chat-container').scrollTop('100%');
+			var chatWindow = document.getElementById('chat-log');
+			chatWindow.scrollTop = chatWindow.scrollHeight;
 		});
 	});
 </script>
