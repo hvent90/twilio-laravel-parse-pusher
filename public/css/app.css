@@ -1,0 +1,70 @@
+.no-padding {
+  padding: 0; }
+
+.no-margin {
+  margin: 0; }
+
+.main-body-container {
+  margin: 0;
+  padding: 0; }
+
+#sidenav-jaun {
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #fff; }
+  #sidenav-jaun .sidebar-title {
+    height: 15vh;
+    min-height: 80px; }
+  #sidenav-jaun .collection {
+    max-height: 85vh;
+    overflow: auto;
+    padding-bottom: 10vh; }
+  #sidenav-jaun h2 {
+    margin: 0;
+    padding: 10px;
+    color: #fff; }
+  #sidenav-jaun li h4 {
+    color: #444; }
+  #sidenav-jaun li .collection .collection-item {
+    line-height: initial;
+    padding: initial;
+    height: auto; }
+  #sidenav-jaun li:hover {
+    background-color: initial; }
+
+.chat-container .message-history-container {
+  height: calc(100vh - 48px);
+  max-height: calc(100vh - 48px);
+  overflow: auto; }
+  .chat-container .message-history-container p {
+    margin: 0; }
+  .chat-container .message-history-container .message-container {
+    overflow: auto; }
+    .chat-container .message-history-container .message-container .message-author {
+      display: block;
+      clear: both;
+      font-style: italic;
+      font-size: 12px; }
+    .chat-container .message-history-container .message-container.message-me .message-author {
+      color: #cfcdcd; }
+    .chat-container .message-history-container .message-container.message-them .message-author {
+      color: #5c5b5b; }
+.chat-container .chat-input-container {
+  background-color: #fff;
+  width: 100%;
+  height: 48px; }
+  .chat-container .chat-input-container form {
+    height: 48px;
+    overflow: auto; }
+  .chat-container .chat-input-container input[type=text] {
+    height: 46px;
+    margin: 0;
+    padding-left: 20px;
+    border-bottom: 3px solid #9e9e9e; }
+    .chat-container .chat-input-container input[type=text]:focus {
+      border-bottom: 3px solid #26a69a; }
+.chat-container .row {
+  margin: 0; }
+
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// Mixins
+@import "material-components/prefixer";
+@import "material-components/mixins";
+@import "material-components/color";
+
+// Variables;
+@import "material-components/variables";
+
+// Reset
+@import "material-components/normalize";
+
+// material-components
+@import "material-components/global";
+@import "material-components/icons-material-design";
+@import "material-components/grid";
+@import "material-components/navbar";
+@import "material-components/roboto";
+@import "material-components/typography";
+@import "material-components/cards";
+@import "material-components/toast";
+@import "material-components/tabs";
+@import "material-components/tooltip";
+@import "material-components/buttons";
+@import "material-components/dropdown";
+@import "material-components/waves";
+@import "material-components/modal";
+@import "material-components/collapsible";
+@import "material-components/materialbox";
+@import "material-components/form";
+@import "material-components/table_of_contents";
+@import "material-components/sideNav";
+@import "material-components/preloader";
+@import "material-components/slider";
+@import "material-components/date_picker/default.scss";
+@import "material-components/date_picker/default.date.scss";
+@import "material-components/date_picker/default.time.scss";

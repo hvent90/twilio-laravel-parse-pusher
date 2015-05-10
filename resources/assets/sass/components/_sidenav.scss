@@ -1,0 +1,39 @@
+#sidenav-jaun {
+	max-height: 100vh;
+	overflow: hidden;
+	background-color: #fff;
+
+	.sidebar-title {
+		height: 15vh;
+		min-height: 80px;
+	}
+
+	.collection {
+		max-height: 85vh;
+		overflow: auto;
+		padding-bottom: 10vh;
+	}
+
+	h2 {
+		margin: 0;
+		padding: 10px;
+		color: #fff;
+	}
+	li {
+		h4 {
+			color: #444;
+		}
+
+		.collection {
+			.collection-item {
+				line-height: initial;
+				padding: initial;
+				height: auto;
+			}
+		}
+
+		&:hover {
+			background-color: initial;
+		}
+	}
+}
