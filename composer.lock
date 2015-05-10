@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46be854864c2d3a5b5f2dbe0c91f7638",
+    "hash": "23901d9758649f11510a10c5d4f9729a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -493,6 +493,53 @@
                 "stream"
             ],
             "time": "2014-08-17 21:15:53"
+        },
+        {
+            "name": "hvent90/api-inspector",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hvent90/api-inspector.git",
+                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hvent90/api-inspector/zipball/a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
+                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
+                "shasum": ""
+            },
+            "require": {
+                "pusher/pusher-php-server": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hvent90\\ApiInspector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Henry Ventura",
+                    "email": "hvent90@gmail.com"
+                }
+            ],
+            "description": "Streams API requests",
+            "keywords": [
+                "5",
+                "api",
+                "debug",
+                "http",
+                "inspect",
+                "inspection",
+                "inspector",
+                "laravel",
+                "request"
+            ],
+            "time": "2015-04-29 17:47:43"
         },
         {
             "name": "illuminate/html",
@@ -1305,6 +1352,50 @@
                 "shell"
             ],
             "time": "2015-03-26 18:43:54"
+        },
+        {
+            "name": "pusher/pusher-php-server",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pusher/pusher-http-php.git",
+                "reference": "64ac86e757ed3349bc172b4069b972d99ba47400"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/64ac86e757ed3349bc172b4069b972d99ba47400",
+                "reference": "64ac86e757ed3349bc172b4069b972d99ba47400",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Library for interacting with the Pusher REST API",
+            "homepage": "https://github.com/pusher/pusher-php-server",
+            "keywords": [
+                "events",
+                "php-pusher-server",
+                "publish",
+                "pusher",
+                "realtime",
+                "rest",
+                "trigger"
+            ],
+            "time": "2015-01-26 10:56:45"
         },
         {
             "name": "simplesoftwareio/simple-sms",

@@ -1,45 +1,35 @@
 <?php namespace App\Http\Controllers;
 
+use App\Message;
 use App\Sender;
 use Illuminate\Http\Request;
-// use Illuminate\Http\Response;
 use Parse\ParseException;
 use Parse\ParseObject;
-// use Symfony\Component\HttpFoundation\Response;
 
 class ParseController extends Controller {
 
 	protected $sender;
+	protected $message;
 
-	public function __construct(Sender $sender)
+	public function __construct(Sender $sender, Message $message)
 	{
 		$this->sender = $sender;
+		$this->message = $message;
 	}
 
 	public function testInsertMessage()
 	{
-		$message = new ParseObject("Message");
-	    $message->set('from_number', '+19998887777');
-
-	    try {
-	    	$message->save();
-			echo 'New object created with objectId: ' . $message->getObjectId();
-	    } catch (ParseException $ex) {
-			echo 'Failed to create new object, with error message: ' + $ex->getMessage();
-	    }
+		$this->message->storeMessage(
+    		'+4848867611',
+    		'Helloeeeeoo',
+    		'123',
+    		'EHzaecd8ia'
+    	);
 	}
 
 	public function testInsertSender()
 	{
-		$message = new ParseObject("Sender");
-	    $message->set('phone_number', '+19998887777');
-
-	    try {
-	    	$message->save();
-			echo 'New object created with objectId: ' . $message->getObjectId();
-	    } catch (ParseException $ex) {
-			echo 'Failed to create new object, with error message: ' + $ex->getMessage();
-	    }
+		$sender = $this->sender->createNewParseSender('+4848867611');
 	}
 
 	public function testRetrieveSender(Request $request)
@@ -47,6 +37,15 @@ class ParseController extends Controller {
 		$sender = $this->sender->getSenderByPhoneNumber($request->get('phone_number'));
 
 		return $sender ? $sender : 'No senders found by that phone number';
+	}
+
+	public function testRetrieveMessagesFromSender()
+	{
+		$sender = $this->sender->getSenderByPhoneNumber('+4848867611');
+
+		$messages = $this->message->getMessagesByUser($sender['parse_object_id']);
+
+		return $messages;
 	}
 
 }

@@ -3,26 +3,9 @@
 		<h2 class="valign">Convos</h2>
 	</div>
 	<div class="collection no-margin">
-		<a href="#!" class="collection-item">+1 484-886-7635</a>
-		<a href="#!" class="collection-item">+1 484-286-4623</a>
-		<a href="#!" class="collection-item">+1 484-843-7610</a>
-		<a href="#!" class="collection-item">+1 610-483-2743</a>
-		<a href="#!" class="collection-item">+1 484-886-7635</a>
-		<a href="#!" class="collection-item">+1 484-286-4623</a>
-		<a href="#!" class="collection-item">+1 484-843-7610</a>
-		<a href="#!" class="collection-item">+1 610-483-2743</a>
-		<a href="#!" class="collection-item">+1 484-886-7635</a>
-		<a href="#!" class="collection-item">+1 484-286-4623</a>
-		<a href="#!" class="collection-item">+1 484-843-7610</a>
-		<a href="#!" class="collection-item">+1 610-483-2743</a>
-		<a href="#!" class="collection-item">+1 484-886-7635</a>
-		<a href="#!" class="collection-item">+1 484-286-4623</a>
-		<a href="#!" class="collection-item">+1 484-843-7610</a>
-		<a href="#!" class="collection-item">+1 610-483-2743</a>
-		<a href="#!" class="collection-item">+1 484-886-7635</a>
-		<a href="#!" class="collection-item">+1 484-286-4623</a>
-		<a href="#!" class="collection-item">+1 484-843-7610</a>
-		<a href="#!" class="collection-item">+1 610-483-2743</a>
+		@foreach ($senders as $sender)
+			<a href="#!" class="collection-item">{{ $sender['phone_number'] }}</a>
+		@endforeach
 	</div>
 </div>
 {{--
