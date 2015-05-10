@@ -45,12 +45,6 @@ class TwilioController extends Controller {
     		$sender['parse_object_id']
     	);
 
-  //   	App::bind('Pusher', function($app) {
-		// 	$keys = $this->app['config']->get('services.pusher');
-
-		//     return new \Pusher($keys['public'], $keys['secret'], $keys['app_id']);
-		// });
-
     	App::make('Pusher')->trigger('magic-channel', $sender['parse_object_id'], [
 			'phone_number' => $phoneNumber,
     		'message' 	   => $message
@@ -59,8 +53,6 @@ class TwilioController extends Controller {
 
 	public function enter(Request $request)
 	{
-		// $request->headers->set('content-type','application/json');
-
 	    // Get the recipient's number.
 	    $phoneNumber = 'admin';
 

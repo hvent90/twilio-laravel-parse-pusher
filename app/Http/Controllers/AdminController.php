@@ -15,13 +15,20 @@ class AdminController extends Controller {
 
 	public function chat($parseUserObjectId = null)
 	{
-		$senders = $this->sender->getSendersAndTheirMessages();
+		// $senders = $this->sender->getSendersAndTheirMessages();
+		$senders = $this->sender->getSendersOrderedByMessages();
 
 		if ($parseUserObjectId) {
-			$sender = $this->sender->getSenderByObjectId($parseUserObjectId);
+			$sender = $this->sender->getSenderByObjectId($parseUserObjectId, false, true);
 		} else {
-			$sender = $senders[0];
+			if ($senders) {
+				$sender = $senders[0];
+			} else {
+				$sender = false;
+				$senders = false;
+			}
 		}
+
 
 		return view('admin.chat', compact('senders', 'sender'));
 	}

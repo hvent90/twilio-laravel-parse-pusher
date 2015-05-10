@@ -4,19 +4,21 @@
 
 <div class="chat-container">
 		<div id="chat-log" class="message-history-container collection no-margin">
-			@foreach ($sender['messages'] as $message)
-				@if ($message['from_number'] == 'admin')
-					<div class="collection-item message-container message-them">
-						<span class="message-author">Me:</span>
-						{{ $message['message'] }}
-					</div>
-				@else
-					<div class="collection-item message-container message-them">
-						<span class="message-author">{{ $message['from_number'] }}:</span>
-						{{ $message['message'] }}
-					</div>
-				@endif
-			@endforeach
+			@if ($sender)
+				@foreach ($sender['messages'] as $message)
+					@if ($message['from_number'] == 'admin')
+						<div class="collection-item message-container message-them">
+							<span class="message-author">Me:</span>
+							{{ $message['message'] }}
+						</div>
+					@else
+						<div class="collection-item message-container message-them">
+							<span class="message-author">{{ $message['from_number'] }}:</span>
+							{{ $message['message'] }}
+						</div>
+					@endif
+				@endforeach
+			@endif
 		</div>
 		<div class="chat-input-container">
 			{!! Form::open() !!}

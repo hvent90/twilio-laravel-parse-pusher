@@ -1,10 +1,18 @@
 <?php namespace App;
 
 use SMS;
+use App\Sender;
 use Parse\ParseQuery;
 use Parse\ParseObject;
 
 class Message  {
+
+	// protected $sender;
+
+	// public function __construct(Sender $sender)
+	// {
+	// 	$this->sender = $sender;
+	// }
 
 	public function storeMessage($phoneNumber, $message, $twilioId, $userParseId)
 	{
@@ -19,6 +27,11 @@ class Message  {
 
 	    try {
 	    	$parseMessage->save();
+
+	    	$sender = new Sender;
+	    	$sender = $sender->getSenderByObjectId($userParseId, true);
+	    	$sender->set('unread', true);
+	    	$sender->save();
 	    } catch (ParseException $ex) {
 			echo 'Failed to create new object, with error message: ' + $ex->getMessage();
 	    }

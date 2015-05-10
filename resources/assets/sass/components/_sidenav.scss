@@ -19,22 +19,24 @@
 		margin: 0;
 		padding: 10px;
 		color: #fff;
+		margin: 0 auto;
 	}
-	li {
-		h4 {
-			color: #444;
-		}
 
-		.collection {
-			.collection-item {
-				line-height: initial;
-				padding: initial;
-				height: auto;
+	h4 {
+		color: #444;
+	}
+
+	.collection {
+		.collection-item {
+			text-align: center;
+
+			&.unread {
+				background-color: #4F6C69
 			}
 		}
+	}
 
-		&:hover {
-			background-color: initial;
-		}
+	&:hover {
+		// background-color: initial;
 	}
 }

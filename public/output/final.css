@@ -7795,15 +7795,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   #sidenav-jaun h2 {
     margin: 0;
     padding: 10px;
-    color: #fff; }
-  #sidenav-jaun li h4 {
+    color: #fff;
+    margin: 0 auto; }
+  #sidenav-jaun h4 {
     color: #444; }
-  #sidenav-jaun li .collection .collection-item {
-    line-height: initial;
-    padding: initial;
-    height: auto; }
-  #sidenav-jaun li:hover {
-    background-color: initial; }
+  #sidenav-jaun .collection .collection-item {
+    text-align: center; }
+    #sidenav-jaun .collection .collection-item.unread {
+      background-color: #4F6C69; }
 
 .chat-container .message-history-container {
   height: calc(100vh - 48px);

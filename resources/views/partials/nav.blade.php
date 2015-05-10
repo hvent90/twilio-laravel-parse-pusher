@@ -3,20 +3,14 @@
 		<h2 class="valign">Convos</h2>
 	</div>
 	<div class="collection no-margin">
-		@foreach ($senders as $sender)
-			<a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item">{{ $sender['phone_number'] }}</a>
-		@endforeach
+    @if ($senders)
+  		@foreach ($senders as $sender)
+        @if ($sender['unread'] == true)
+          <a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item waves-effect waves-light waves-green active unread">{{ $sender['phone_number'] }}</a>
+        @else
+          <a href="/chat/{{ $sender['parse_object_id'] }}" class="collection-item waves-effect waves-light waves-green">{{ $sender['phone_number'] }}</a>
+        @endif
+  		@endforeach
+    @endif
 	</div>
 </div>
-{{--
-<nav id="sidenav-jaun">
-  <ul id="slide-out" class="side-nav fixed">
-  	<li class="collection-header"><h4>Conversations</h4></li>
-  	<div class="collection">
-  		<a href="#!" class="collection-item">Alvin</a>
-  	</div>
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-</nav> --}}
