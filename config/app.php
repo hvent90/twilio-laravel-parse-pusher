@@ -146,7 +146,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'SimpleSoftwareIO\SMS\SMSServiceProvider',
-		'GrahamCampbell\Parse\ParseServiceProvider'
+		'GrahamCampbell\Parse\ParseServiceProvider',
+		'Barryvdh\Cors\CorsServiceProvider',
 	],
 
 	/*
