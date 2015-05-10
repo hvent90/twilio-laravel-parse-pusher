@@ -46,6 +46,20 @@
 
 		var channel = pusher.subscribe('magic-channel');
 
+		channel.bind("side-nav", function(data) {
+			var senderListItem = $('#' + data.parse_object_id);
+
+			if (senderListItem.text()) {
+				console.log('found existing sender in side menu');
+				senderListItem.prependTo($('#sender-list'));
+			} else {
+				console.log('did not find an existing sender in side menu');
+				$('#sender-list').prepend(
+					'<a id="'+data.parse_object_id+'" href="/chat/'+data.parse_object_id+'" class="collection-item waves-effect waves-light waves-green unread">'+data.phone_number+'</a>'
+				);
+			}
+		});
+
 		channel.bind("{{ $sender['parse_object_id'] }}", function(data) {
 			console.log('receiving pusher');
 			$('#chat-log').append(
@@ -56,16 +70,6 @@
 
 			var chatWindow = document.getElementById('chat-log');
 			chatWindow.scrollTop = chatWindow.scrollHeight;
-
-			var senderListItem = $('#' + data.parse_object_id);
-
-			if (senderListItem.text()) {
-				senderListItem.prependTo($('#sender-list'));
-			} else {
-				$('#sender-list').prepend(
-					'<a id="'+data.parse_object_id+'" href="/chat/'+data.parse_object_id+'" class="collection-item waves-effect waves-light waves-green unread">'+data.phone_number+'</a>'
-				);
-			}
 		});
 	});
 </script>
