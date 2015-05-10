@@ -76,7 +76,7 @@ class Sender  {
 		}
 
 		if ($returnParseObject == true) {
-			return $results;
+			return $results[0];
 		}
 
 		$message = new Message;
