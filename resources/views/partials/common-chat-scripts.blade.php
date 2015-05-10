@@ -42,19 +42,6 @@
 			}
 		});
 
-		// window.App = {};
-
-		// App.Notifier = function() {
-		// 	this.notify = function(messagePackage) {
-		// 		$('#chat-log').append(
-		// 			'<div class="collection-item message-container message-them">' +
-		// 				'<span class="message-author">+'messagepackage.phone_number'+:</span>' +
-		// 				messagePackage.message +
-		// 			'</div>'
-		// 		);
-		// 	};
-		// };
-
 		var pusher = new Pusher('8b70545cb1629c2331be');
 
 		var channel = pusher.subscribe('magic-channel');
@@ -67,12 +54,18 @@
 					data.message +
 				'</div>');
 
-			// $('#chat-log').animate({
-			// 		scrollTop: $('#chat-log').scrollHeight
-			// 	}, 500);
-			// $('.chat-container').scrollTop('100%');
 			var chatWindow = document.getElementById('chat-log');
 			chatWindow.scrollTop = chatWindow.scrollHeight;
+
+			var senderListItem = $('#' + data.parse_object_id);
+
+			if (senderListItem.text()) {
+				senderListItem.prependTo($('#sender-list'));
+			} else {
+				$('#sender-list').prepend(
+					'<a id="'+data.parse_object_id+'" href="/chat/'+data.parse_object_id+'" class="collection-item waves-effect waves-light waves-green unread">'+data.phone_number+'</a>'
+				);
+			}
 		});
 	});
 </script>

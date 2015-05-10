@@ -47,7 +47,8 @@ class TwilioController extends Controller {
 
     	App::make('Pusher')->trigger('magic-channel', $sender['parse_object_id'], [
 			'phone_number' => $phoneNumber,
-    		'message' 	   => $message
+    		'message' 	   => $message,
+    		'parse_object_id' => $sender['parse_object_id']
 		]);
 	}
 
