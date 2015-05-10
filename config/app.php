@@ -148,7 +148,7 @@ return [
 		'SimpleSoftwareIO\SMS\SMSServiceProvider',
 		'GrahamCampbell\Parse\ParseServiceProvider',
 		'Barryvdh\Cors\CorsServiceProvider',
-		'Hvent90\ApiInspector\ApiInspectorServiceProvider'
+		// 'Hvent90\ApiInspector\ApiInspectorServiceProvider'
 	],
 
 	/*
