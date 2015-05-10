@@ -1,5 +1,11 @@
 <?php
 
+App::bind('Pusher', function($app) {
+	$keys = $this->app['config']->get('services.pusher');
+
+    return new \Pusher($keys['public'], $keys['secret'], $keys['app_id']);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -32,6 +38,17 @@ Route::group(['prefix' => 'parse'], function() {
 	Route::get('/test-insert-sender', 'ParseController@testInsertSender');
 	Route::post('/test-retrieve-sender', 'ParseController@testRetrieveSender');
 	Route::get('/test-retrieve-messages-from-sender', 'ParseController@testRetrieveMessagesFromSender');
+});
+
+Route::get('test', function() {
+	// var_dump(getenv('PUSHER_PUBLIC'));
+	// var_dump(getenv('PUSHER_SECRET'));
+	// var_dump(getenv('PUSHER_APP_ID'));
+
+	App::make('Pusher')->trigger('magic-channel', 'receive-sms', [
+		'phone_number' => 'fasdfa',
+		'message' 	   => 'asdfasdfasdf'
+	]);
 });
 
 Route::get('/twilio', function() {

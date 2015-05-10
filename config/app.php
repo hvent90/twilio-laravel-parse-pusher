@@ -148,8 +148,6 @@ return [
 		'SimpleSoftwareIO\SMS\SMSServiceProvider',
 		'GrahamCampbell\Parse\ParseServiceProvider',
 		'Barryvdh\Cors\CorsServiceProvider',
-		'Vinkla\Pusher\PusherServiceProvider'
-
 	],
 
 	/*
@@ -200,7 +198,6 @@ return [
 		'SMS' 		=> 'SimpleSoftwareIO\SMS\Facades\SMS',
 		'Form'		=> 'Illuminate\Html\FormFacade',
 		'HTML'		=> 'Illuminate\Html\HtmlFacade',
-		'Pusher' => 'Vinkla\Pusher\Facades\Pusher'
 	],
 
 ];

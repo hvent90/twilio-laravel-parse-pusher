@@ -51,14 +51,19 @@
 
 		var pusher = new Pusher('8b70545cb1629c2331be');
 
-		var channel = pusher.subscribe('magic');
+		var channel = pusher.subscribe('magic-channel');
 
 		channel.bind('receive-sms', function(data) {
+			console.log('receiving pusher');
 			$('#chat-log').append(
 				'<div class="collection-item message-container message-them">' +
 					'<span class="message-author">' + data.phone_number + ':</span>' +
 					data.message +
 				'</div>');
+
+			$('#chat-log').animate({
+					scrollTop: $('#chat-log').prop("#scrollHeight")
+				}, 500);
 		});
 	});
 </script>

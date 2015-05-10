@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "95d97830922229324e85c2e51236a40a",
+    "hash": "c1d38f236f6cb6a3dae64224c52c2c73",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -313,63 +313,6 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
-        },
-        {
-            "name": "graham-campbell/manager",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
-                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "~2.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Manager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
-                }
-            ],
-            "description": "Manager Provides Some Manager Functionality For Laravel 5",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Manager",
-                "Laravel-Manager",
-                "connector",
-                "framework",
-                "interface",
-                "laravel",
-                "manager"
-            ],
-            "time": "2015-05-07 12:37:59"
         },
         {
             "name": "graham-campbell/parse",
@@ -1365,16 +1308,16 @@
         },
         {
             "name": "pusher/pusher-php-server",
-            "version": "v2.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pusher/pusher-http-php.git",
-                "reference": "64ac86e757ed3349bc172b4069b972d99ba47400"
+                "reference": "89c649e7c3ace3ff3087021d24985414d812bbf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/64ac86e757ed3349bc172b4069b972d99ba47400",
-                "reference": "64ac86e757ed3349bc172b4069b972d99ba47400",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/89c649e7c3ace3ff3087021d24985414d812bbf2",
+                "reference": "89c649e7c3ace3ff3087021d24985414d812bbf2",
                 "shasum": ""
             },
             "require": {
@@ -1382,7 +1325,7 @@
                 "php": ">=5.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "~4"
             },
             "type": "library",
             "autoload": {
@@ -1405,7 +1348,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2015-01-26 10:56:45"
+            "time": "2015-05-07 14:12:33"
         },
         {
             "name": "simplesoftwareio/simple-sms",
@@ -2280,66 +2223,6 @@
                 "twilio"
             ],
             "time": "2014-12-04 19:17:59"
-        },
-        {
-            "name": "vinkla/pusher",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vinkla/pusher.git",
-                "reference": "5b24b5f67d20d9406e946d914f02178e487295d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/pusher/zipball/5b24b5f67d20d9406e946d914f02178e487295d7",
-                "reference": "5b24b5f67d20d9406e946d914f02178e487295d7",
-                "shasum": ""
-            },
-            "require": {
-                "graham-campbell/manager": "~2.1",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
-                "php": ">=5.5.9",
-                "pusher/pusher-php-server": "~2.0"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "~2.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Vinkla\\Pusher\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vincent Klaiber",
-                    "email": "hello@vinkla.com"
-                }
-            ],
-            "description": "A Pusher bridge for Laravel",
-            "keywords": [
-                "api",
-                "events",
-                "http",
-                "laravel",
-                "php-pusher-server",
-                "publish",
-                "pusher",
-                "realtime",
-                "rest",
-                "trigger"
-            ],
-            "time": "2015-05-09 13:07:52"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3469,7 +3352,7 @@
     "stability-flags": {
         "simplesoftwareio/simple-sms": 20,
         "barryvdh/laravel-cors": 20,
-        "vinkla/pusher": 20
+        "pusher/pusher-php-server": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

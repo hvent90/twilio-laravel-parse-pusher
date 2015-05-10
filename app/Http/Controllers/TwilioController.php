@@ -45,10 +45,10 @@ class TwilioController extends Controller {
     		$sender['parse_object_id']
     	);
 
-    	Pusher::trigger('magic', 'receive-sms', [
-    		'phone_number' => $phoneNumber,
+    	App::make('Pusher')->trigger('magic-channel', 'receive-sms', [
+			'phone_number' => $phoneNumber,
     		'message' 	   => $message
-    	]);
+		]);
 	}
 
 	public function enter(Request $request)
